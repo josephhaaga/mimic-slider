@@ -26,8 +26,8 @@ jQuery(function($) {
 
 	if (controlsAnotherSlider) {
 		// TODO could this go after the window.mimicSliders registration?
-		const targetSlider = window.mimicSliders[targetSliderName]
 		thisSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+			const targetSlider = window.mimicSliders[targetSliderName]
 			$(targetSlider).slick('slickGoTo', nextSlide);
 		});
 	}
