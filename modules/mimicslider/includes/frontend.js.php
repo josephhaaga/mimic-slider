@@ -16,6 +16,7 @@ jQuery(function($) {
 
 	// TODO could this be a const?
 	let thisSlider = $('.fl-node-<?php echo $id; ?> .fl-mimic-slider').slick({
+		arrows: false,
 		<?php if ( isset( $settings->dots ) && 'true' == $settings->dots ) : ?>
 		dots: true,
 		<?php endif; ?>
