@@ -32,7 +32,7 @@ class MimicSliderModule extends FLBuilderModule {
  * Register the module and its form settings.
  * We are using a very simple form here with only two options, photo_one and photo_two.
  */
-FLBuilder::register_module( 'MimicSliderModule', array(
+FLBuilder::register_module('MimicSliderModule', array(
 	'general' => array(
 		'title' => __( 'General', 'fl-builder' ),
 		'sections' => array(
@@ -60,18 +60,83 @@ FLBuilder::register_module( 'MimicSliderModule', array(
 							'true'  => __( 'Yes', 'fl-builder' ),
 						),
 					),
-					'photo_one' => array(
-						'type' => 'photo',
-						'label' => __( 'Photo One', 'fl-builder' ),
-						'preview' => array(
-							'type' => 'none',
+				),
+			),
+		),
+	),
+	'slides'  => array(
+		'title'    => __( 'Slides', 'fl-builder' ),
+		'sections' => array(
+			'general' => array(
+				'title'  => '',
+				'fields' => array(
+					'slides' => array(
+						'type'         => 'form',
+						'label'        => __( 'Slide', 'fl-builder' ),
+						'form'         => 'mimic_slider_slide',
+						'preview_text' => 'label',
+						'multiple'     => true,
+					),
+				),
+			),
+		),
+	),
+));
+
+FLBuilder::register_settings_form('mimic_slider_slide', array(
+	'title' => __( 'Slide Settings', 'fl-builder' ),
+	'tabs'  => array(
+		'general' => array( // Tab
+			'title'    => __( 'General', 'fl-builder' ), // Tab title
+			'sections' => array( // Tab Sections
+				'general'    => array(
+					'title'  => '',
+					'fields' => array(
+						'label' => array(
+							'type'  => 'text',
+							'label' => __( 'Slide Label', 'fl-builder' ),
+							'help'  => __( 'A label to identify this slide on the Slides tab of the Content Slider settings.', 'fl-builder' ),
 						),
 					),
-					'photo_two' => array(
-						'type' => 'photo',
-						'label' => __( 'Photo Two', 'fl-builder' ),
-						'preview' => array(
-							'type' => 'none',
+				),
+				'content'    => array(
+					'title'  => __( 'Content Layout', 'fl-builder' ),
+					'fields' => array(
+						'content_layout' => array(
+							'type'    => 'select',
+							'label'   => __( 'Type', 'fl-builder' ),
+							'default' => 'none',
+							'help'    => __( 'Insert content into your slide', 'fl-builder' ),
+							'options' => array(
+								'text'  => __( 'Text', 'fl-builder' ),
+								'photo' => __( 'Photo', 'fl-builder' ),
+								'none'  => _x( 'None', 'Content type.', 'fl-builder' ),
+							),
+							'toggle'  => array(
+								'text'  => array(
+									'fields'   => array( 'title', 'text' ),
+									'sections' => array( 'text' ),
+								),
+								'photo' => array(
+									'fields'   => array( 'title', 'text', 'fg_photo' ),
+									'sections' => array( 'text' ),
+								),
+							),
+						),
+						'fg_photo'       => array(
+							'type'        => 'photo',
+							'show_remove' => true,
+							'label'       => __( 'Photo', 'fl-builder' ),
+						),
+						'title'          => array(
+							'type'  => 'text',
+							'label' => __( 'Heading', 'fl-builder' ),
+						),
+						'text'           => array(
+							'type'          => 'editor',
+							'media_buttons' => false,
+							'wpautop'       => false,
+							'rows'          => 16,
 						),
 					),
 				),
