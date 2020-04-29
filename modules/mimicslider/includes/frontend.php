@@ -20,7 +20,7 @@
 			}
 			?>
         <div>
-            <?php $module->render_content( $slide ); ?>
+            <?php $module->render_slide( $slide ); ?>
         </div>
     <?php
         endfor;

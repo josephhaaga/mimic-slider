@@ -43,10 +43,10 @@ class MimicSliderModule extends FLBuilderModule {
 		}
 
 		if ( ! empty( $slide->title ) ) {
-			echo '<' . $slide->title_tag . ' class="title">' . $slide->title . '</' . $slide->title_tag . '>';
+			echo '<h3 class="title">' . $slide->title . '</h3>';
 		}
 		if ( ! empty( $slide->text ) ) {
-			echo '<div class="text">' . wpautop( $wp_embed->autoembed( $slide->text ) ) . $this->render_link( $slide ) . '</div>';
+			echo '<div class="text">' . wpautop( $wp_embed->autoembed( $slide->text ) ) . '</div>';
 		}
 
 		echo '</div>';
