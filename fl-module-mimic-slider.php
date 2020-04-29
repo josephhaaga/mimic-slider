@@ -7,7 +7,7 @@
  * Author: Joseph Haaga
  * Author URI: https://www.joehaaga.xyz
  */
-class MimicSliderModule {
+class MimicSliderPlugin {
 
 	public static function init() {
 
@@ -16,4 +16,4 @@ class MimicSliderModule {
 		}
 	}
 }
-add_action( 'init', array( 'MimicSliderModule', 'init' ) );
+add_action( 'init', array( 'MimicSliderPlugin', 'init' ) );

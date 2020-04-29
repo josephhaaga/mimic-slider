@@ -37,8 +37,14 @@ FLBuilder::register_module( 'MimicSliderModule', array(
 		'title' => __( 'General', 'fl-builder' ),
 		'sections' => array(
 			'general' => array(
-				'title' => __( 'Section Title', 'fl-builder' ),
+				'title' => __( 'Slides', 'fl-builder' ),
 				'fields' => array(
+					'slider_name' => array(
+						'type' => 'text',
+						'label' => __( 'Slider Name', 'fl-builder' ),
+						'help'  => __( 'A name for this Mimic Slider.', 'fl-builder' ),
+						'default' => 'my_first_mimic_slider',
+					),
 					'photo_one' => array(
 						'type' => 'photo',
 						'label' => __( 'Photo One', 'fl-builder' ),
