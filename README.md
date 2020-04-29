@@ -13,7 +13,7 @@ Then, set the `target_slider_name` attribute of the _controlling_ slider to the 
 
 ![Parent Slider](assets/parent_slider.png)
 
-Events (e.g. `nextSlide()`, `prevSlide()`)on the _controlling_ slider (`my_slider_A`) will propogate to the targeted slider (`my_slider_B`).
+Events (e.g. `nextSlide()`, `prevSlide()`) on the _controlling_ slider (`my_slider_A`) will propogate to the targeted slider (`my_slider_B`).
 
 ## Installation
 
