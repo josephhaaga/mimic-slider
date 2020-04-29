@@ -23,7 +23,7 @@ jQuery(function($) {
 		// TODO could this go after the window.mimicSliders registration?
 		const targetSlider = window.mimicSliders[targetSliderName]
 		thisSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-			targetSlider.slickGoTo(nextSlide);
+			$(targetSlider).slick('slickGoTo', nextSlide);
 		});
 	}
 
