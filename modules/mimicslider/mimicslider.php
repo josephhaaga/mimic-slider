@@ -1,10 +1,10 @@
 <?php
 /**
- * This is an example module that uses the TwentyTwenty jQuery plugin.
+ * This is the module code for the Mimic Slider Plugin.
  *
- * @class TwentyTwentyExampleModule
+ * @class MimicSliderModule
  */
-class TwentyTwentyExampleModule extends FLBuilderModule {
+class MimicSliderModule extends FLBuilderModule {
 
 	/**
 	 * The module construct, we need to pass some basic info here.
@@ -12,8 +12,8 @@ class TwentyTwentyExampleModule extends FLBuilderModule {
 	public function __construct() {
 
 		parent::__construct(array(
-			'name'            => __( 'Twenty Twenty', 'fl-builder' ),
-			'description'     => __( 'An basic example module using jQuery TwentyTwenty.', 'fl-builder' ),
+			'name'            => __( 'Mimic Slider', 'fl-builder' ),
+			'description'     => __( 'A basic slider module using Slick.', 'fl-builder' ),
 			'category'        => __( 'Example Modules', 'fl-builder' ),
 			'dir'             => __DIR__,
 			'partial_refresh' => true,
@@ -23,9 +23,8 @@ class TwentyTwentyExampleModule extends FLBuilderModule {
 		/**
 		 * Now we include our js and css files using the module classes built in methods.
 		 */
-		$this->add_js( 'jquery-event-move',   $this->url . 'js/jquery.event.move.js',   array( 'jquery' ) );
-		$this->add_js( 'jquery-twentytwenty', $this->url . 'js/jquery.twentytwenty.js', array( 'jquery' ) );
-		$this->add_css( 'twentytwenty',       $this->url . 'css/twentytwenty.css' );
+		$this->add_js( 'jquery-mimicslider', $this->url . 'js/slick.min.js', array( 'jquery' ) );
+		$this->add_css( 'mimicslider',       $this->url . 'css/slick.css' );
 	}
 }
 
@@ -33,7 +32,7 @@ class TwentyTwentyExampleModule extends FLBuilderModule {
  * Register the module and its form settings.
  * We are using a very simple form here with only two options, photo_one and photo_two.
  */
-FLBuilder::register_module( 'TwentyTwentyExampleModule', array(
+FLBuilder::register_module( 'MimicSliderModule', array(
 	'general' => array(
 		'title' => __( 'General', 'fl-builder' ),
 		'sections' => array(
