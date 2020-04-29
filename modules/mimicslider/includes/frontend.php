@@ -11,8 +11,18 @@
 
 ?>
 <div class="fl-mimic-slider mimicslider-container">
-    <!-- The before image is first -->
-    <img src="<?php echo $settings->photo_one_src; ?>" />
-    <!-- The after image is last -->
-    <img src="<?php echo $settings->photo_two_src; ?>" />
+    <?php
+		for ( $i = 0; $i < count( $settings->slides ); $i++ ) :
+			if ( ! is_object( $settings->slides[ $i ] ) ) {
+				continue;
+			} else {
+				$slide = $settings->slides[ $i ];
+			}
+			?>
+        <div>
+            <pre><?php print_r($slide); ?></pre>
+        </div>
+    <?php
+        endfor;
+    ?>
 </div>
