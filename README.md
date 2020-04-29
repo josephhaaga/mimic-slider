@@ -7,11 +7,11 @@ This module plugin for Beaver Builder uses Ken Wheeler's `slick` to create slide
 
 Create two Mimic Sliders, and give them descriptive names (e.g. `my_slider_A` and `my_slider_B`).
 
-![Parent Slider](assets/parent_slider.png)
+![Child Slider](assets/child_slider.png)
 
 Then, set the `target_slider_name` attribute of the _controlling_ slider to the name you gave the other slider (e.g. enter `my_slider_B` in the `target_slider_name` input for `my_slider_A`). 
 
-![Child Slider](assets/child_slider.png)
+![Parent Slider](assets/parent_slider.png)
 
 Events (e.g. `nextSlide()`, `prevSlide()`)on the _controlling_ slider (`my_slider_A`) will propogate to the targeted slider (`my_slider_B`).
 
