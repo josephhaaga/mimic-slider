@@ -51,6 +51,15 @@ FLBuilder::register_module( 'MimicSliderModule', array(
 						'help'  => __( 'The name of the slider this Mimic Slider should control.', 'fl-builder' ),
 						'default' => '',
 					),
+					'dots' => array(
+						'type'    => 'select',
+						'label'   => __( 'Show Dots?', 'fl-builder' ),
+						'default' => 'false',
+						'options' => array(
+							'false' => __( 'No', 'fl-builder' ),
+							'true'  => __( 'Yes', 'fl-builder' ),
+						),
+					),
 					'photo_one' => array(
 						'type' => 'photo',
 						'label' => __( 'Photo One', 'fl-builder' ),
