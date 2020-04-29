@@ -24,3 +24,6 @@ Jquery TwentyTwenty https://github.com/zurb/twentytwenty
 Custom module developer guide http://kb.wpbeaverbuilder.com/article/124-custom-module-developer-guide
 
 BeaverBuilder KB tutorial https://kb.wpbeaverbuilder.com/article/578-create-a-module-plugin-with-a-jquery-plugin
+
+# Todos
+Make the `'name_of_target_slider'` a select field with options sourced from `window.mimicSliders`.
