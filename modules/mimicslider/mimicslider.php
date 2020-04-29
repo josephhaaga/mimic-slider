@@ -45,6 +45,12 @@ FLBuilder::register_module( 'MimicSliderModule', array(
 						'help'  => __( 'A name for this Mimic Slider.', 'fl-builder' ),
 						'default' => 'my_first_mimic_slider',
 					),
+					'name_of_target_slider' => array(
+						'type' => 'text',
+						'label' => __( 'Target Slider Name', 'fl-builder' ),
+						'help'  => __( 'The name of the slider this Mimic Slider should control.', 'fl-builder' ),
+						'default' => 'another_mimic_slider',
+					),
 					'photo_one' => array(
 						'type' => 'photo',
 						'label' => __( 'Photo One', 'fl-builder' ),
