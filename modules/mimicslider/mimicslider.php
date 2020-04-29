@@ -36,10 +36,14 @@ class MimicSliderModule extends FLBuilderModule {
 
 		echo '<div class="content-wrap">';
 		
-		if ( 'photo' == $slide->content_layout ) {
-			echo '<div class="content" style="background-image: url(' . $slide->slide_photo_src . ');">';
-		} else {
-			echo '<div class="content">';
+		// if ( 'photo' == $slide->content_layout ) {
+		// 	echo '<div class="content" style="background-image: url(' . $slide->slide_photo_src . ');">';
+		// } else {
+		// 	echo '<div class="content">';
+		// }
+
+		if ( ! empty( $slide->slide_photo_src ) ) {
+			echo '<img style="width: 100%; height: 100%;" src="' . $slide->slide_photo_src . '" />';
 		}
 
 		if ( ! empty( $slide->title ) ) {
