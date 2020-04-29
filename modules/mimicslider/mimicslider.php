@@ -25,6 +25,32 @@ class MimicSliderModule extends FLBuilderModule {
 		 */
 		$this->add_js( 'jquery-mimicslider', $this->url . 'js/slick.min.js', array( 'jquery' ) );
 		$this->add_css( 'mimicslider',       $this->url . 'css/slick.css' );
+
+	}
+
+	/**
+	 * @method render_slide
+	 */
+	public function render_slide( $slide ) {
+		global $wp_embed;
+
+		echo '<div class="content-wrap">';
+		
+		if ( 'photo' == $slide->content_layout ) {
+			echo '<div class="content" style="background-image: url(' . $slide->slide_photo_src . ');">';
+		} else {
+			echo '<div class="content">';
+		}
+
+		if ( ! empty( $slide->title ) ) {
+			echo '<' . $slide->title_tag . ' class="title">' . $slide->title . '</' . $slide->title_tag . '>';
+		}
+		if ( ! empty( $slide->text ) ) {
+			echo '<div class="text">' . wpautop( $wp_embed->autoembed( $slide->text ) ) . $this->render_link( $slide ) . '</div>';
+		}
+
+		echo '</div>';
+		echo '</div>';
 	}
 }
 
@@ -105,12 +131,11 @@ FLBuilder::register_settings_form('mimic_slider_slide', array(
 						'content_layout' => array(
 							'type'    => 'select',
 							'label'   => __( 'Type', 'fl-builder' ),
-							'default' => 'none',
+							'default' => 'text',
 							'help'    => __( 'Insert content into your slide', 'fl-builder' ),
 							'options' => array(
 								'text'  => __( 'Text', 'fl-builder' ),
 								'photo' => __( 'Photo', 'fl-builder' ),
-								'none'  => _x( 'None', 'Content type.', 'fl-builder' ),
 							),
 							'toggle'  => array(
 								'text'  => array(
@@ -118,12 +143,12 @@ FLBuilder::register_settings_form('mimic_slider_slide', array(
 									'sections' => array( 'text' ),
 								),
 								'photo' => array(
-									'fields'   => array( 'fg_photo' ),
+									'fields'   => array( 'slide_photo' ),
 									'sections' => array( ),
 								),
 							),
 						),
-						'fg_photo'       => array(
+						'slide_photo'       => array(
 							'type'        => 'photo',
 							'show_remove' => true,
 							'label'       => __( 'Photo', 'fl-builder' ),
