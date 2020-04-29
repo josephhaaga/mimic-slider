@@ -26,4 +26,6 @@ Custom module developer guide http://kb.wpbeaverbuilder.com/article/124-custom-m
 BeaverBuilder KB tutorial https://kb.wpbeaverbuilder.com/article/578-create-a-module-plugin-with-a-jquery-plugin
 
 # Todos
-Make the `'name_of_target_slider'` a select field with options sourced from `window.mimicSliders`.
+    * Add text content slides
+    * Add variable number of slides
+    * Make the `'name_of_target_slider'` a select field with options sourced from `window.mimicSliders`.
