@@ -118,8 +118,8 @@ FLBuilder::register_settings_form('mimic_slider_slide', array(
 									'sections' => array( 'text' ),
 								),
 								'photo' => array(
-									'fields'   => array( 'title', 'text', 'fg_photo' ),
-									'sections' => array( 'text' ),
+									'fields'   => array( 'fg_photo' ),
+									'sections' => array( ),
 								),
 							),
 						),
