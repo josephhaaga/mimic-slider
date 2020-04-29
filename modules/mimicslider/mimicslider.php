@@ -25,6 +25,7 @@ class MimicSliderModule extends FLBuilderModule {
 		 */
 		$this->add_js( 'jquery-mimicslider', $this->url . 'js/slick.min.js', array( 'jquery' ) );
 		$this->add_css( 'mimicslider',       $this->url . 'css/slick.css' );
+		$this->add_css( 'mimicslider-theme',       $this->url . 'css/slick-theme.css' );
 
 	}
 
