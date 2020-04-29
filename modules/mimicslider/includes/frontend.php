@@ -13,15 +13,15 @@
 <div class="fl-mimic-slider mimicslider-container">
     <?php
 		for ( $i = 0; $i < count( $settings->slides ); $i++ ) :
-			if ( ! is_object( $settings->slides[ $i ] ) ) {
-				continue;
-			} else {
-				$slide = $settings->slides[ $i ];
-			}
-			?>
-        <div>
-            <?php $module->render_slide( $slide ); ?>
-        </div>
+                if ( ! is_object( $settings->slides[ $i ] ) ) {
+                    continue;
+                } else {
+                    $slide = $settings->slides[ $i ];
+                }
+                ?>
+            <div>
+                <?php $module->render_slide( $slide ); ?>
+            </div>
     <?php
         endfor;
     ?>

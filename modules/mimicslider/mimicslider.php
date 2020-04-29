@@ -35,6 +35,7 @@ class MimicSliderModule extends FLBuilderModule {
 		global $wp_embed;
 
 		echo '<div class="content-wrap">';
+		echo '<div class="content">';
 		
 		// if ( 'photo' == $slide->content_layout ) {
 		// 	echo '<div class="content" style="background-image: url(' . $slide->slide_photo_src . ');">';
